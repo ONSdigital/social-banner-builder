@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Banner builder</title>
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+
+<body>
+
+  <div class="wrapper">
+
+    <main>
+
+      <div class="tools">
+
+        <img src="img/ons.svg" alt="ons" class="logo">
+
+        <div class="ui">
+          <div class="ui-block">
+            <input type="file" onchange="setImg(this);" class="fileupload" id="fileupload" name="fileupload" />
+            <label for="fileupload"><img src="img/up.svg" alt="upload a file" class="uploadicon">Insert a screenshot</label>
+          </div>
+          <div class="ui-block">
+
+            <h3>Zoom level</h3>
+            <input type="range" id="slider" value="1" min="0.25" max="1" step="0.1" />
+          </div>
+
+        </div>
+
+        <div class="instructions">
+
+          <h4>Instructions</h4>
+          <ol>
+            <li>Take a screenshot of the chart as normal</li>
+            <li>Open this tool and select the screenshot you generated from the button above</li>
+            <li>Edit title, subtitle and source text</li>
+            <li>Screenshot the generated chart graphic composition</li>
+          </ol>
+
+        </div>
+
+      </div>
+
+      <div class="canvas">
+
+        <div class="banner" id="dynamicbanner">
+          <h2 contenteditable="true">Click to edit me</h2>
+          <h3 contenteditable="true">Click to edit me</h3>
+          <img src="img/placeholder.svg" alt="" class="chart">
+          <div class="chart-footer">
+            <div class="">
+              <p class=""><b>Source:</b>&nbsp;<span contenteditable="true">Click to edit me</span></p>
+            </div>
+            <div class="">
+              <img src="img/ons.svg" alt="ons" class="logo">
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </main>
+
+  </div>
+
+  <script src="js/jquery.js" type="text/javascript"></script>
+  <script src="js/main.js" type="text/javascript"></script>
+
+</body>
+
+</html>

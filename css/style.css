@@ -1,0 +1,259 @@
+@font-face {
+    font-family: 'Open Sans';
+    src: url('../fonts/OpenSans-Italic.woff2') format('woff2'),
+        url('../fonts/OpenSans-Italic.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Open Sans';
+    src: url('../fonts/OpenSans-Bold.woff2') format('woff2'),
+        url('../fonts/OpenSans-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Open Sans';
+    src: url('../fonts/OpenSansLight-Italic.woff2') format('woff2'),
+        url('../fonts/OpenSansLight-Italic.woff') format('woff');
+    font-weight: 300;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Open Sans';
+    src: url('../fonts/OpenSans-ExtraboldItalic.woff2') format('woff2'),
+        url('../fonts/OpenSans-ExtraboldItalic.woff') format('woff');
+    font-weight: 800;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Open Sans';
+    src: url('../fonts/OpenSans.woff2') format('woff2'),
+        url('../fonts/OpenSans.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Open Sans';
+    src: url('../fonts/OpenSans-SemiboldItalic.woff2') format('woff2'),
+        url('../fonts/OpenSans-SemiboldItalic.woff') format('woff');
+    font-weight: 600;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Open Sans';
+    src: url('../fonts/OpenSans-BoldItalic.woff2') format('woff2'),
+        url('../fonts/OpenSans-BoldItalic.woff') format('woff');
+    font-weight: bold;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Open Sans';
+    src: url('../fonts/OpenSans-Extrabold.woff2') format('woff2'),
+        url('../fonts/OpenSans-Extrabold.woff') format('woff');
+    font-weight: 800;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Open Sans';
+    src: url('../fonts/OpenSans-Light.woff2') format('woff2'),
+        url('../fonts/OpenSans-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Open Sans';
+    src: url('../fonts/OpenSans-Semibold.woff2') format('woff2'),
+        url('../fonts/OpenSans-Semibold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Open Sans';
+}
+
+main {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  height: 100vh;
+}
+
+.tools {
+  background: #393939;
+  color: white;
+  padding: 1.5rem;
+}
+
+.tools .logo {
+  width:230px;
+  display: block;
+  filter: invert(100);
+  margin: 10px auto 35px auto;
+}
+
+.ui h3 {
+  margin:0 0 5px 0;
+  font-weight: 200;
+  font-size: 13px;
+}
+
+.ui-block {
+  margin: 1.25rem 0;
+}
+
+.instructions {
+  background: rgba(0,0,0,0.2);
+  padding: 1.25rem;
+  border-radius: 4px;
+  box-shadow: inset 0 0 3px rgba(0,0,0,0.5);
+}
+
+.instructions h4 {
+  margin-top: 0;
+}
+
+.instructions ol {
+  font-size: 14px;
+  margin: 0;
+  padding: 0;
+  list-style-position: inside;
+}
+
+.instructions li {
+  margin-bottom: 10px;
+}
+
+.canvas {
+  background: #ccc;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  width:100%;
+  height: 100vh;
+}
+
+.banner {
+  background:white;
+  width:1025px;
+  min-height: 740px;
+  padding: 40px;
+  color:#444;
+}
+
+#dynamicbanner {
+  transition: all .3s;
+}
+
+.fileupload {
+  display: none;
+}
+
+.fileupload + label {
+  background: black;
+  width:100%;
+  padding: 1rem 2rem;
+  text-align: center;
+  display: block;
+  text-transform: capitalize;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: all .3s;
+}
+
+.fileupload + label:hover {
+  background: rgb(68, 134, 9);
+  transform: scale(1.01);
+  box-shadow: 0 3px 4px rgba(0,0,0,0.6);
+}
+
+.uploadicon {
+  width:18px;
+  height: auto;
+  filter: invert(100);
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 0.75rem;
+  margin-top: -6px;
+}
+
+input[type=range] {
+  width: 100%;
+}
+
+input[type=range]:after {
+  content:'100%';
+}
+
+input[type=range]:before {
+  content:'25%';
+}
+
+input[type=range] {
+  -webkit-appearance: none;
+  appearance: none;
+  margin: 0 0 20px 0;
+  width: 100%;
+  background-color: transparent;
+}
+input[type=range]:focus {
+  outline: none;
+}
+input[type=range]::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 6px;
+  cursor: pointer;
+  background: #222;
+  border-radius: 20px;
+  border: 1px solid #444;
+}
+input[type=range]::-webkit-slider-thumb {
+  border: 0;
+  height: 12px;
+  width: 12px;
+  border-radius: 100px;
+  background: #222;
+  border:2px solid #888;
+  cursor: pointer;
+  -webkit-appearance: none;
+  margin-top: -4px;
+}
+
+h2, h3 {
+  margin-top:0;
+}
+
+h3 {
+  font-weight: 400;
+}
+
+.chart {
+  width: 100%;
+}
+
+.logo {
+  width:300px;
+}
+
+.chart-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: -20px;
+}
