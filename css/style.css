@@ -243,6 +243,15 @@ h3 {
   font-weight: 400;
 }
 
+.source {
+  min-width: 200px;
+}
+
+.source:before {
+  content: "Source: ";
+  font-weight: bold;
+}
+
 .chart {
   width: 100%;
 }
